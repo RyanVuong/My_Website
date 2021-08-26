@@ -1,2 +1,2 @@
 # my_website
-I built this website using only CSS and HTML.
+Personal website source code. Currently in construction.
