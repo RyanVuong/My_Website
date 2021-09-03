@@ -1,2 +1,2 @@
 # my_website
-Personal website source code. Built using CSS, HTML, and Javascript.
+Personal website source code. Built using purely CSS, HTML, and Javascript, without any frameworks.
