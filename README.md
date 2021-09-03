@@ -1,2 +1,2 @@
 # my_website
-Personal website source code. Currently in construction.
+Personal website source code. Built using CSS, HTML, and Javascript.
