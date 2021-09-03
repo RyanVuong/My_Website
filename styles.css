@@ -6,12 +6,21 @@
 
     --mainText:black;
     --secondaryText: #4b5156;
+
+    --pfp-shadow: lightseagreen;
+
+    --skills-background: #ede2cc;
+    --theme-dot-border: #1e1e1f;
 }
 
 
 html, body{
     padding: 0;
     margin: 0;
+}
+
+body *{
+    transition: 0.3s;
 }
 
 h1,h2,h3,h4,h5,h6, strong{
@@ -69,6 +78,7 @@ h7{ font-size: 16px; }
 .greetingWrapper{
     display: grid;
     /* border: 2px dashed lightcoral; */
+    margin-top: 100px;
     min-height: 40em; 
     text-align: left;
     align-content: center;
@@ -82,8 +92,34 @@ h7{ font-size: 16px; }
     margin-top: 2em;
 }
 
-.nestedGreeting{
-    line-height: 0%;
+#personalizeTheme{
+    display: flex; 
+    justify-content: left;
+}
+
+.theme-dot{
+    
+    height: 25px;
+	width: 25px;
+	background-color: black;
+	border-radius: 50%;
+
+	margin: 5px;
+	border:2px solid var(--theme-dot-border);
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+	cursor: pointer;
+}
+
+#light-mode{
+    background-color: #eaeaea;
+}
+
+#dark-mode{
+    background-color: #1e213b;
 }
 
 #profile_pic{
@@ -92,9 +128,10 @@ h7{ font-size: 16px; }
     height:  300px;
     width:  300px;
     object-fit: cover;
+    border: 1px solid gray;
 
-    -webkit-box-shadow: 22px 11px 2px 3px #00961D; 
-    box-shadow: 22px 11px 2px 3px #00961D;
+    -webkit-box-shadow: 22px 11px 2px 3px var(--pfp-shadow); 
+    box-shadow: 22px 11px 2px 3px var(--pfp-shadow);
 }
 
 .introWrapper{
@@ -110,6 +147,13 @@ h7{ font-size: 16px; }
     ;
 }
 
+.welcomeMessage{
+    display: grid;
+	text-align: left;
+	align-content: center;
+	line-height: 4em;
+}
+
 .navWrapper{
     grid-area: navWrapper;
     line-height: 5em;
@@ -119,6 +163,7 @@ h7{ font-size: 16px; }
 }
 
 .checkOut{
+    color: var(--secondaryText);
     line-height:4em;
     font-size: 18px;
     font-family: 'Prompt', sans-serif;
@@ -166,11 +211,14 @@ h7{ font-size: 16px; }
 .skills{
     display: flex;
     justify-content: space-evenly;
-    background-color: #ede2cc;
-    padding-top: 20px;
-    padding-left: 20px;
+    background-color: var(--skills-background);
+    align-items: center;
     margin-top: 120px;
     margin-bottom: 85px;
+    /* padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 120px;
+    margin-bottom: 85px; */
     /* border: 1px solid var(--borderColor); */
 }
 
@@ -191,9 +239,10 @@ h7{ font-size: 16px; }
 
 .thumbnail{
     display: block;
-    width: 100%;
+    width: 99.5%;
     height: 180px;
     object-fit: cover;
+    border: 1px solid gainsboro;
 }
 
 .post-preview{
@@ -231,5 +280,6 @@ h7{ font-size: 16px; }
 @media screen and (max-width: 1200px){
     .main-container{
        width: 95%; 
+       min-height: 100%;
     }
 }

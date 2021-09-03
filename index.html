@@ -8,21 +8,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Prompt:wght@200;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link id="theme-style" rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <section class="s1">
         <div class="main-container">
             <div class="greetingWrapper">
                 <div class="greetingMessage">
-                    <h1>Welcome! I'm Ryan Vuong</h1>
-                    <h6>&nbsp 3rd Year Computer Science Student @ UCLA</h6>
-                    <div class="nestedGreeting">
-                        <h6>&nbsp I like coding and stuff.</h6>
+                    <div class="welcomeMessage">
+                        <h1>Welcome! I'm Ryan Vuong</h1>
                     </div>
+                    <h6>&nbsp 3rd Year Computer Science Student @ UCLA</h6>
+                    <h6>&nbsp Personalize Theme: 
+                        <span id="personalizeTheme">&nbsp
+                            <span data-mode="light" id="light-mode" class="theme-dot"></span>
+                            <span data-mode="dark" id="dark-mode" class="theme-dot"></span>
+                        </span>
+                    </h6>
+                    
                 </div>
                 <div class="greetingPicture">
                     <img id="profile_pic" src="images/headshot_new.jpg">
@@ -114,35 +122,41 @@
                     <div class="post">
                         <img class="thumbnail" src="images/minirogue.png">
                         <div class="post-preview">
-                            <h6 class="post-title">Post Title</h6>
-                            <p class="post-intro">Filler text.
-                                Some more text.
+                            <h6 class="post-title">Dungeon Action Terminal Game</h6>
+                            <p class="post-intro">
+                                Multi-level dungeon game built with C++. Levels 
+                                are randomized, items, weapons, and monsters can be found.
+                                Win by picking up the golden idol.
                             </p>
-                            <a href="#">Read More</a>
+                            <a target="_blank" href="https://github.com/RyanVuong/MiniRogue_Game">Github Repo</a>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="post">
-                        <img class="thumbnail" src="images/minirogue.png">
+                        <img class="thumbnail" src="images/beaglebone.jpg">
                         <div class="post-preview">
-                            <h6 class="post-title">Post Title</h6>
-                            <p class="post-intro">Filler text.
-                                Some more text.
+                            <h6 class="post-title">Temperature Sensor</h6>
+                            <p class="post-intro">
+                                Temperature sensor code for BeagleBone Green IoT built in C.
+                                Data sent through TCP connection with TLS encryption.
+                                Accepts commands to change output.
                             </p>
-                            <a href="#">Read More</a>
+                            <a target="_blank" href="https://github.com/RyanVuong/Temperature_Sensor">Github Repo</a>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="post">
-                        <img class="thumbnail" src="images/minirogue.png">
+                        <img class="thumbnail" src="images/nearbyPlaces.png">
                         <div class="post-preview">
-                            <h6 class="post-title">Post Title</h6>
-                            <p class="post-intro">Filler text.
-                                Some more text.
+                            <h6 class="post-title">Nearby Locations Program</h6>
+                            <p class="post-intro">
+                                Program built in Python utilizing the Google Places API to
+                                show nearby locations based on coordinates inputted. Server 
+                                and client system built with Python's asyncio library. 
                             </p>
-                            <a href="#">Read More</a>
+                            <a target="_blank" href="https://github.com/RyanVuong/Nearby_Locations">Github Repo</a>
                         </div>
                     </div>
                 </div>
@@ -177,6 +191,8 @@
             <h6 style="text-align: center;">Website built by Ryan Vuong, source code <a target="_blank" href="https://github.com/RyanVuong/my_website">here</a></h6>
         </div>
     </section>
+
+    <script type="text/Javascript" src="script.js"></script>
 
 </body>
 </html>
